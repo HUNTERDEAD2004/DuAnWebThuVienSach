@@ -1,0 +1,6 @@
+@PrivateProjectAPI_HostAddress = http://localhost:5152
+
+GET {{PrivateProjectAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
