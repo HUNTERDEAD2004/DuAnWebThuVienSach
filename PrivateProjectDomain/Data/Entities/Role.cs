@@ -14,6 +14,7 @@ namespace PrivateProjectDomain.Data.Entities
 
         public string RoleName { get; set; }
 
+        //Khoas ngoai
         public virtual ICollection<User> Users { get; set; }
     }
 }

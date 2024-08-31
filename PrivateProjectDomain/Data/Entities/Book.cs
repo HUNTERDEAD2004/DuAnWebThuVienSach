@@ -16,6 +16,8 @@ namespace PrivateProjectDomain.Data.Entities
 
         public Guid ISBN { get; set; }
 
+        public int View { get; set; }
+
         public double SellingPrice { get; set; }
 
         public double RentalPrice { get; set; }
