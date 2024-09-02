@@ -24,6 +24,6 @@ namespace PrivateProjectDomain.Data.Entities
         //Khoas ngoai
         public virtual Invoice Invoice { get; set; }
 
-        public virtual ICollection<Book> Books { get; set; }
+        public virtual Book Book { get; set; }
     }
 }

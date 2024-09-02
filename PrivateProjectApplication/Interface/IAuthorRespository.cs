@@ -8,6 +8,6 @@ namespace PrivateProjectApplication.Interface
 {
     public interface IAuthorRespository
     {
-
+        
     }
 }

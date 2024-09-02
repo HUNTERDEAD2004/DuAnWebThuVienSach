@@ -29,7 +29,9 @@ namespace PrivateProjectDomain.Data.Entities
         public BookStatus Status { get; set; }
 
         //Khóa ngoại
-        public virtual CartDetail CartDetail { get; set; }
+        public virtual Sale Sale { get; set; }
+
+        public virtual ICollection<CartDetail> CartDetails { get; set; }
 
         public virtual ICollection<FeedBack> FeedBacks { get; set; }
 
@@ -42,5 +44,7 @@ namespace PrivateProjectDomain.Data.Entities
         public virtual ICollection<PurchaseBooksDetail> PurchaseBooksDetails { get; set; }
 
         public virtual ICollection<BorrowBooksDetail> BorrowBooksDetails { get; set; }
+
+        public virtual ICollection<InvoiceDetail> InvoiceDetails { get; set; }
     }
 }

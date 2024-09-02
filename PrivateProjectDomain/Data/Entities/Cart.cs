@@ -16,6 +16,9 @@ namespace PrivateProjectDomain.Data.Entities
         public double TotalPrice { get; set; }
 
         //Khóa ngoại
+
+        public virtual ICollection<CartDetail> CartDetails { get; set; }
+
         public virtual User User { get; set; }
     }
 }

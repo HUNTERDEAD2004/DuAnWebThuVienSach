@@ -31,6 +31,8 @@ namespace PrivateProjectDomain.Data.Entities
         //Khóa ngoại
         public virtual Cart Carts { get; set; }
 
+        public virtual Role Role { get; set; }
+
         public virtual ICollection<FeedBack> FeedBacks { get; set; }
 
         public virtual ICollection<Favorite> Favorites { get; set; }
@@ -39,6 +41,6 @@ namespace PrivateProjectDomain.Data.Entities
 
         public virtual ICollection<BorrowBooks> BorrowBooks { get; set; }
 
-        public virtual Role Role { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }
