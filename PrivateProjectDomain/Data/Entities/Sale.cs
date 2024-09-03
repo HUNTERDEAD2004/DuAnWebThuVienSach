@@ -9,11 +9,11 @@ namespace PrivateProjectDomain.Data.Entities
 {
     public class Sale : EntityBase
     {
-        public string SaleCode { get; set; } = string.Empty;
+        public string SaleCode { get; set; } = string.Empty; // Mã sale
 
         public string SaleName { get; set; } = string.Empty;
 
-        public decimal DiscountPrice { get; set; }
+        public decimal DiscountPrice { get; set; } // Giá giảm
 
         public string Description { get; set; } = string.Empty;
 

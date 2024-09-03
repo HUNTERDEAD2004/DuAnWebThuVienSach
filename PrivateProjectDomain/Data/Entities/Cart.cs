@@ -13,7 +13,7 @@ namespace PrivateProjectDomain.Data.Entities
 
         public Guid UserId { get; set; }
 
-        public double TotalPrice { get; set; }
+        public double TotalPrice { get; set; } // Tổng giá
 
         //Khóa ngoại
 

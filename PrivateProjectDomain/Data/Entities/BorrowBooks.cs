@@ -14,7 +14,7 @@ namespace PrivateProjectDomain.Data.Entities
 
         public Guid UserId { get; set; }
 
-        public DateTime ReturnDate { get; set; }
+        public DateTime ReturnDate { get; set; } // Ngày trả thực tế
 
         public BorrowBookStatus Status { get; set; }
 

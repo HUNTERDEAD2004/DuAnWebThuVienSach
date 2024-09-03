@@ -12,15 +12,15 @@ namespace PrivateProjectDomain.Data.Entities
     {
         public string BookId { get; set; } = string.Empty;
 
-        public string Title { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty; // Tiêu đề
 
-        public Guid ISBN { get; set; }
+        public Guid ISBN { get; set; } // Mã định danh đặc biệt của sách
 
-        public int View { get; set; }
+        public int View { get; set; } // Lượt đọc
 
-        public double SellingPrice { get; set; }
+        public double SellingPrice { get; set; }  // Giá bán
 
-        public double RentalPrice { get; set; }
+        public double RentalPrice { get; set; } // Giá mượn
 
         public string SaleId { get; set; } = string.Empty;
 

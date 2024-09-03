@@ -9,11 +9,11 @@ namespace PrivateProjectDomain.Data.Entities
 {
     public class Voucher : EntityBase
     {
-        public string VoucherCode { get; set; } = string.Empty;
+        public string VoucherCode { get; set; } = string.Empty; // Mã voucher
 
         public string VoucherName { get; set;} = string.Empty;
 
-        public decimal DiscountPrice { get; set; }
+        public decimal DiscountPrice { get; set; } // Giá giảm
 
         public string Description { get; set; } = string.Empty;
 

@@ -15,9 +15,9 @@ namespace PrivateProjectDomain.Data.Entities
 
         public string BookId { get; set; } = string.Empty;
 
-        public Decimal Rating { get; set; }
+        public Decimal Rating { get; set; } // Sao đánh giá
 
-        public string Comment { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty; // Comment
 
         //Khóa ngoại
         public virtual Book Book { get; set; }

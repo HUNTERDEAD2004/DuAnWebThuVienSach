@@ -8,8 +8,8 @@ namespace PrivateProjectDomain.Enum
 {
     public enum BorrowBookStatus
     {
-        OnLoan = 1,
-        LoanCancel = 2,
-        Overdue = 3,
+        OnLoan = 1, // Đang mượn
+        LoanCancel = 2, // Hủy mượn
+        Overdue = 3, // Quá hạn
     }
 }

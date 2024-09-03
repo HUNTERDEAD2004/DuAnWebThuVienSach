@@ -17,9 +17,9 @@ namespace PrivateProjectDomain.Data.Entities
 
         public int Quantity { get; set; } 
 
-        public double TotalPrice { get; set; }
+        public double TotalPrice { get; set; } 
 
-        public double UnitPrice { get; set; }
+        public double UnitPrice { get; set; } // Giá từng sản phẩm
 
         //Khoas ngoai
         public virtual Invoice Invoice { get; set; }

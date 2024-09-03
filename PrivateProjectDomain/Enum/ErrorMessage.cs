@@ -8,8 +8,8 @@ namespace PrivateProjectDomain.Enum
 {
     public enum ErrorMessage
     {
-        Successfull = 1,
-        Fail = 2,
-        Null = 3,
+        Successfull = 1, // Hoàn Thành
+        Fail = 2, // Lỗi
+        Null = 3, // Rỗng
     }
 }

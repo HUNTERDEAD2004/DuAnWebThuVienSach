@@ -18,7 +18,7 @@ namespace PrivateProjectDomain.Data.Entities
 
         public string PhoneNumber { get; set; } = string.Empty;
 
-        public DateTime DOB { get; set; }
+        public DateTime DOB { get; set; } // Date Of Birth ( ngày sinh )
 
         public EntityStatus Status { get; set; }
 

@@ -8,8 +8,8 @@ namespace PrivateProjectDomain.Enum
 {
     public enum BookStatus
     {
-        Complete = 1,
-        ComingOut = 2,
-        Stopped = 3,
+        Complete = 1, // Hoàn thành
+        ComingOut = 2, // Đang ra
+        Stopped = 3, // Dừng ra
     }
 }

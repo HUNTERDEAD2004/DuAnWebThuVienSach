@@ -14,13 +14,13 @@ namespace PrivateProjectDomain.Data.Entities
 
         public Guid UserId { get; set; }
 
-        public string VoucherCode { get; set; } = string.Empty;
+        public string VoucherCode { get; set; } = string.Empty; // Mã voucher
 
-        public double TotalPrice { get; set; }
+        public double TotalPrice { get; set; } // Tổng giá
 
-        public string PaymentMethod { get; set; } = string.Empty;
+        public string PaymentMethod { get; set; } = string.Empty; // Phước thức thanh toán
 
-        public string Note { get; set; } = string.Empty;
+        public string Note { get; set; } = string.Empty; // Ghi chú
 
         public OderStatus Status { get; set; }
 

@@ -16,9 +16,9 @@ namespace PrivateProjectDomain.Data.Entities
 
         public string BookId { get; set; } = string.Empty;
 
-        public int Quantity { get; set; }
+        public int Quantity { get; set; } // Số lượng
 
-        public double Price { get; set; }
+        public double Price { get; set; } // Giá
 
         //Khóa ngoại
         public virtual Cart Cart { get; set; }
