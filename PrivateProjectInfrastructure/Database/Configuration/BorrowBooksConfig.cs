@@ -17,7 +17,11 @@ namespace PrivateProjectInfrastructure.Database.Configuration
             builder.HasKey(k => k.BorrowBooksId);
             builder.HasOne(a => a.User)
                             .WithMany(p => p.BorrowBooks)
-                            .HasForeignKey(a => a.BorrowBooksId)
+                            .HasForeignKey(a => a.UserId)
+                            .OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(a => a.Voucher)
+                            .WithMany(p => p.BorrowBooks)
+                            .HasForeignKey(a => a.VoucherCode)
                             .OnDelete(DeleteBehavior.Restrict);
         }
     }

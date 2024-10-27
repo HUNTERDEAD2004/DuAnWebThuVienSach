@@ -17,11 +17,11 @@ namespace PrivateProjectInfrastructure.Database.Configuration
             builder.HasKey(k => k.BorrowBooksDetailId);
             builder.HasOne(a => a.Book)
                             .WithMany(p => p.BorrowBooksDetails)
-                            .HasForeignKey(a => a.BorrowBooksDetailId)
+                            .HasForeignKey(a => a.BookId)
                             .OnDelete(DeleteBehavior.Restrict);
             builder.HasOne(a => a.BorrowBooks)
                         .WithMany(p => p.BorrowBooksDetails)
-                        .HasForeignKey(a => a.BorrowBooksDetailId)
+                        .HasForeignKey(a => a.BorrowBooksId)
                         .OnDelete(DeleteBehavior.Restrict);
         }
     }

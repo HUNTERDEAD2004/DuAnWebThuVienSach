@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace PrivateProjectDomain.Enum
 {
-    public enum ErrorMessage
+    public enum OrderStatus
     {
-        Successfull = 1, // Hoàn Thành
-        Fail = 2, // Lỗi
-        Null = 3, // Rỗng
+        OrderConfirmed, // Hoàn thành
+        Cancel // Hủy
     }
 }

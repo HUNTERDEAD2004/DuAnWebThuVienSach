@@ -1,6 +1,7 @@
 ﻿using PrivateProjectDomain.Data.Base;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,15 @@ namespace PrivateProjectDomain.Data.Entities
     {
         public Guid FavoriteId { get; set; }
 
+        [Required(ErrorMessage = "ID is required.")]
         public Guid UserId { get; set; }
 
-        public string BookId { get; set; } = string.Empty;
+        [Required(ErrorMessage = "ID is required.")]
+        public Guid BookId { get; set; } 
 
-        //Khoa ngoai
+        //Khóa ngoại
+
+        // n - 1
         public virtual User User { get; set; }
 
         public virtual Book Book { get; set; }
