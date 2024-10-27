@@ -1,4 +1,5 @@
-﻿using PrivateProjectDomain.Data.Base;
+﻿using Domain.Data.Base;
+using PrivateProjectDomain.Data.Base;
 using PrivateProjectDomain.Enum;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PrivateProjectDomain.Data.Entities
 {
-    public class User : EntityBase
+    public class User : SpecialBase
     {
         public Guid UserId { get; set; }
 
@@ -35,6 +36,7 @@ namespace PrivateProjectDomain.Data.Entities
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = "Status is required.")]
         public EntityStatus Status { get; set; } = EntityStatus.Active;
 
         // Khóa ngoại

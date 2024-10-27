@@ -1,4 +1,5 @@
-﻿using PrivateProjectDomain.Data.Base;
+﻿using Domain.Enum;
+using PrivateProjectDomain.Data.Base;
 using PrivateProjectDomain.Enum;
 using System;
 using System.Collections.Generic;
@@ -13,11 +14,11 @@ namespace PrivateProjectDomain.Data.Entities
     {
         public Guid BorrowBooksId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "ID is required.")]
         public Guid UserId { get; set; }
 
         [Required(ErrorMessage = "ID is required.")]
-        public Guid VoucherCode { get; set; }
+        public Guid? VoucherCode { get; set; }
 
         [DataType(DataType.Date)]
         [Range(typeof(DateTime), "1/1/2024", "1/1/2028", ErrorMessage = "DOB must be between 01/01/2024 and the Return date.")]
@@ -26,9 +27,10 @@ namespace PrivateProjectDomain.Data.Entities
         [Range(0.01, double.MaxValue, ErrorMessage = "Total price must be greater than 0.")]
         public double TotalPrice { get; set; } // Tổng giá
 
-        [StringLength(255, MinimumLength = 1, ErrorMessage = "Title must be between 1 and 255 characters.")]
-        public string PaymentMethod { get; set; }
+        [Required(ErrorMessage = "Status is required.")]
+        public PaymentStatus PaymentMethod { get; set; }
 
+        [Required(ErrorMessage = "Status is required.")]
         public BorrowBookStatus Status { get; set; }
 
         //Khóa ngoại

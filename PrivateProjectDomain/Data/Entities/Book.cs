@@ -22,16 +22,19 @@ namespace PrivateProjectDomain.Data.Entities
 
         public int View { get; set; } // Lượt đọc
 
-        public List<string> ImageBook { get; set; } 
+        public List<string> ImageBook { get; set; } = new List<string>();
 
         [Range(0.01, double.MaxValue, ErrorMessage = "Selling price must be greater than 0.")]
         public double SellingPrice { get; set; }  // Giá bán
+
+        [Range(0.01, double.MaxValue, ErrorMessage = "Price Decreased must be greater than 0.")]
+        public double? PriceDecreased { get; set; }  // Giá giảm
 
         [Range(0.01, double.MaxValue, ErrorMessage = "Rental price must be greater than 0.")]
         public double RentalPrice { get; set; } // Giá mượn
 
         [Required(ErrorMessage = "ID is required.")]
-        public Guid SaleId { get; set; }
+        public Guid? SaleId { get; set; }
 
         [StringLength(1000, ErrorMessage = "Description must not exceed 1000 characters.")]
         public string Description { get; set; } = string.Empty;

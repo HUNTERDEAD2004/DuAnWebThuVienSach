@@ -1,4 +1,5 @@
-﻿using PrivateProjectDomain.Data.Base;
+﻿using Domain.Data.Base;
+using PrivateProjectDomain.Data.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PrivateProjectDomain.Data.Entities
 {
-    public class Role : EntityBase
+    public class Role : SpecialBase
     {
         public Guid RoleId { get; set; }
 

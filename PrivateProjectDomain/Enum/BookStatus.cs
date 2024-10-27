@@ -11,5 +11,6 @@ namespace PrivateProjectDomain.Enum
         Complete = 1, // Hoàn thành
         ComingOut = 2, // Đang ra
         Stopped = 3, // Dừng ra
+        publishedBooks = 4 // Sách xuất bản
     }
 }

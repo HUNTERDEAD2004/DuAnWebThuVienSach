@@ -26,6 +26,7 @@ namespace PrivateProjectDomain.Data.Entities
         [Range(typeof(DateTime), "1/1/1900", "1/1/2024", ErrorMessage = "DOB must be between 01/01/1900 and the current date.")]
         public DateTime DOB { get; set; } // Date Of Birth ( ngày sinh )
 
+        [Required(ErrorMessage = "Status is required.")]
         public EntityStatus Status { get; set; }
 
         //Khoá ngoai

@@ -1,4 +1,5 @@
-﻿using PrivateProjectDomain.Data.Base;
+﻿using Domain.Enum;
+using PrivateProjectDomain.Data.Base;
 using PrivateProjectDomain.Enum;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,10 @@ namespace PrivateProjectDomain.Data.Entities
         [Range(0.01, double.MaxValue, ErrorMessage = "Total price must be greater than 0.")]
         public double TotalPrice { get; set; } // Tổng giá
 
-        [StringLength(255, MinimumLength = 1, ErrorMessage = "Title must be between 1 and 255 characters.")]
-        public string PaymentMethod { get; set; }
+        [Required(ErrorMessage = "Status is required.")]
+        public PaymentStatus PaymentMethod { get; set; }
 
+        [Required(ErrorMessage = "Status is required.")]
         public OrderStatus Status { get; set; }
 
         // Khóa ngoại

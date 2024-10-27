@@ -5,22 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PrivateProjectApplication.DataTransferObj.BorrowBooksDetail
+namespace PrivateProjectApplication.DataTransferObj.CartDetail
 {
-    public class BorrowBooksDetail
+    public class CartDetailDTO
     {
-        public Guid BorrowBooksDetailId { get; set; }
+        public Guid CartDetailId { get; set; }
+
+        [Required(ErrorMessage = "ID is required.")]
+        public Guid CartId { get; set; }
 
         [Required(ErrorMessage = "ID is required.")]
         public Guid BookId { get; set; }
 
-        [Required(ErrorMessage = "ID is required.")]
-        public Guid BorrowBooksId { get; set; }
-
         [Range(1, 99, ErrorMessage = "Quantity must be between 1 and 99 Book.")]
-        public int Quantity { get; set; }
+        public int Quantity { get; set; } // Số lượng
 
         [Range(0.01, double.MaxValue, ErrorMessage = "Price must be greater than 0.")]
         public double Price { get; set; } // Giá
+
+        [Range(0.01, double.MaxValue, ErrorMessage = "Total price must be greater than 0.")]
+        public double TotalPrice { get; set; } // Tổng giá
+
+        public bool IsPaid { get; set; } = false;
     }
 }

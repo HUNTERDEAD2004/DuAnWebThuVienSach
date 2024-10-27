@@ -12,7 +12,7 @@ namespace PrivateProjectDomain.Data.Entities
     {
         public Guid CartId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "ID is required.")]
         public Guid UserId { get; set; }
 
         // Khóa ngoại
